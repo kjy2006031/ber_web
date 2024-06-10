@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nav with Fixed Background Image</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* 커스텀 내비게이션 바 스타일 */
+    .navbar-custom {
+      font-family: "Gasoek One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      background-color: #000; /* 배경색 검정색 */
+      box-shadow: none; /* 그림자 없음 */
+    }
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-nav .nav-link {
+      color: black; /* 텍스트 색상 흰색 */
+      font-weight: bold; /* 폰트 두껍게 */
+      transition: color 0.3s; /* 색상 변화 애니메이션 */
+    }
+
+    .navbar-custom .navbar-brand:hover,
+    .navbar-custom .navbar-nav .nav-link:hover {
+      color: red !important; /* 마우스 호버 시 텍스트 색상 */
+    }
+
+    .navbar-custom .navbar-toggler-icon {
+      background-color: #fff; /* 햄버거 아이콘 색상 흰색 */
+    }
+
+    .navbar-custom .navbar-toggler {
+      border: none; /* 햄버거 아이콘 버튼 테두리 제거 */
+    }
+
+    /* 배경 이미지 고정 */
+    body {
+      background-image: url('main.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: white; /* 기본 텍스트 색상 */
+      background-blend-mode: darken;
+    }
+    .card-title,
+    .card-text {
+      color: black;
+    }
+    /* 대표자 카드 스타일 */
+    .representative-card {
+      background-color: #f8f9fa; /* 배경색 */
+      padding: 20px; /* 내부 여백 */
+      border-radius: 10px; /* 테두리 반경 */
+    }
+
+    .representative-card h4 {
+      color: #000; /* 제목 색상 */
+    }
+
+    /* 대표자 이미지 스타일 */
+    .representative-img {
+      width: 100%; /* 이미지 너비 */
+      border-radius: 10px; /* 테두리 반경 */
+    }
+
+
+    /* 팀장 카드 스타일 */
+    .team-leader-card {
+      background-color: #f8f9fa; /* 배경색 */
+      padding: 20px; /* 내부 여백 */
+      border-radius: 10px; /* 테두리 반경 */
+    }
+
+    .team-leader-card h4 {
+      color: #000; /* 제목 색상 */
+    }
+
+    /* 팀장 이미지 스타일 */
+    .team-leader-img {
+      width: 100%; /* 이미지 너비 */
+      border-radius: 10px; /* 테두리 반경 */
+    }
+
+        .footer {
+            background-color: black; /* 배경색 검정색 */
+            color: white; /* 텍스트 색상 흰색 */
+            text-align: center; /* 텍스트 가운데 정렬 */
+            padding: 20px 0; /* 패딩 */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom">
+  <div class="container">
+    <a class="navbar-brand" href="home.html">BER</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="main.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dev.html">DEV</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="discord.html">DISCORD</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- 대표자 소개 섹션 추가 -->
+<section id="representative-intro" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading mb-4">대표 소개</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center"> <!-- 가운데 정렬 -->
+      <!-- 대표 카드 -->
+      <div class="col-lg-4 mb-4">
+        <div class="card representative-card">
+          <img src="haul.png" class="card-img-top representative-img" alt="Representative">
+          <div class="card-body">
+            <h4 class="card-title">Haul__ss</h4>
+            <p class="card-text">대표에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 팀장 소개 섹션 추가 -->
+<section id="leader-intro" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading mb-4">팀장 소개</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center"> <!-- 가운데 정렬 -->
+      <!-- 팀장 카드 -->
+      <div class="col-lg-4 mb-4">
+        <div class="card leader-card">
+          <img src="minsu.png" class="card-img-top leader-img" alt="Leader">
+          <div class="card-body">
+            <h4 class="card-title">팀장 이름</h4>
+            <p class="card-text">팀장에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card leader-card">
+          <img src="mongpin.png" class="card-img-top leader-img" alt="Leader">
+          <div class="card-body">
+            <h4 class="card-title">팀장 이름</h4>
+            <p class="card-text">팀장에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card leader-card">
+          <img src="icekeeper1234.png" class="card-img-top leader-img" alt="Leader">
+          <div class="card-body">
+            <h4 class="card-title">팀장 이름</h4>
+            <p class="card-text">팀장에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card leader-card">
+          <img src="icekeeper1234.png" class="card-img-top leader-img" alt="Leader">
+          <div class="card-body">
+            <h4 class="card-title">팀장 이름</h4>
+            <p class="card-text">팀장에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card leader-card">
+          <img src="icekeeper1234.png" class="card-img-top leader-img" alt="Leader">
+          <div class="card-body">
+            <h4 class="card-title">팀장 이름</h4>
+            <p class="card-text">팀장에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 개발자 소개 섹션 추가 -->
+<section id="developer-intro" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading mb-4">개발자 소개</h2>
+      </div>
+    </div>
+    <div class="row">
+      <!-- 개발자 1 -->
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <img src="junge.png" class="card-img-top" alt="Developer 1">
+          <div class="card-body">
+            <h4 class="card-title">개발자 이름</h4>
+            <p class="card-text">여기에 개발자에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 개발자 2 -->
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <img src="icekeeper1234.png" class="card-img-top" alt="Developer 2">
+          <div class="card-body">
+            <h4 class="card-title">개발자 이름</h4>
+            <p class="card-text">여기에 개발자에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 개발자 3 -->
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <img src="icekeeper1234.png" class="card-img-top" alt="Developer 3">
+          <div class="card-body">
+            <h4 class="card-title">개발자 이름</h4>
+            <p class="card-text">여기에 개발자에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 추가적인 개발자 카드는 필요에 따라 이어서 추가할 수 있습니다 -->
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <img src="icekeeper1234.png" class="card-img-top" alt="Developer 3">
+          <div class="card-body">
+            <h4 class="card-title">개발자 이름</h4>
+            <p class="card-text">여기에 개발자에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <img src="icekeeper1234.png" class="card-img-top" alt="Developer 3">
+          <div class="card-body">
+            <h4 class="card-title">개발자 이름</h4>
+            <p class="card-text">여기에 개발자에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <img src="icekeeper1234.png" class="card-img-top" alt="Developer 3">
+          <div class="card-body">
+            <h4 class="card-title">개발자 이름</h4>
+            <p class="card-text">여기에 개발자에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 개발자 3 -->
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <img src="icekeeper1234.png" class="card-img-top" alt="Developer 3">
+          <div class="card-body">
+            <h4 class="card-title">개발자 이름</h4>
+            <p class="card-text">여기에 개발자에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 추가적인 개발자 카드는 필요에 따라 이어서 추가할 수 있습니다 -->
+      <!-- 개발자 3 -->
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <img src="icekeeper1234.png" class="card-img-top" alt="Developer 3">
+          <div class="card-body">
+            <h4 class="card-title">개발자 이름</h4>
+            <p class="card-text">여기에 개발자에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 추가적인 개발자 카드는 필요에 따라 이어서 추가할 수 있습니다 -->
+      <!-- 개발자 3 -->
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <img src="icekeeper1234.png" class="card-img-top" alt="Developer 3">
+          <div class="card-body">
+            <h4 class="card-title">개발자 이름</h4>
+            <p class="card-text">여기에 개발자에 대한 간단한 소개를 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 추가적인 개발자 카드는 필요에 따라 이어서 추가할 수 있습니다 -->
+    </div>
+  </div>
+</section>
+<div class="footer">
+  <p>© 2024 BER. All rights reserved.</p>
+  <p>서버 관련 문의는 하울쨩한테</p>
+</div>
+
+<!-- Bootstrap, JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

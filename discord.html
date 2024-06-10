@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav with Fixed Background Image</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* 커스텀 내비게이션 바 스타일 */
+        .navbar-custom {
+            font-family: "Gasoek One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            background-color: #000; /* 배경색 검정색 */
+            box-shadow: none; /* 그림자 없음 */
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: black; /* 텍스트 색상 흰색 */
+            font-weight: bold; /* 폰트 두껍게 */
+            transition: color 0.3s; /* 색상 변화 애니메이션 */
+        }
+
+        .navbar-custom .navbar-brand:hover,
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: red !important; /* 마우스 호버 시 텍스트 색상 */
+        }
+
+        .navbar-custom .navbar-toggler-icon {
+            background-color: #fff; /* 햄버거 아이콘 색상 흰색 */
+        }
+
+        .navbar-custom .navbar-toggler {
+            border: none; /* 햄버거 아이콘 버튼 테두리 제거 */
+        }
+
+        /* 배경 이미지 고정 */
+        body {
+            background-image: url('main.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white; /* 기본 텍스트 색상 */
+            background-blend-mode: darken;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .grid {
+            margin-top: 20px; /* 요소를 아래로 떨어뜨림 */
+        }
+
+        .grid .col {
+            margin-bottom: 20px; /* 요소 간의 간격 추가 */
+        }
+
+        .grid .card-body {
+            color: black; /* 카드 내용 텍스트 색상 검정색 */
+        }
+
+        .container {
+            overflow-y: scroll; /* 수직 스크롤바만 표시 */
+            flex: 1;
+        }
+
+        /* Webkit 스크롤바 숨기기 */
+        .container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .footer {
+            background-color: black; /* 배경색 검정색 */
+            color: white; /* 텍스트 색상 흰색 */
+            text-align: center; /* 텍스트 가운데 정렬 */
+            padding: 20px 0; /* 패딩 */
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom">
+  <div class="container">
+    <a class="navbar-brand" href="home.html">BER</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="main.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dev.html">DEV</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="discord.html">DISCORD</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 디스코드 초대 섹션 추가 -->
+<section id="discord-invite" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading mb-4">디스코드에 참여하세요</h2>
+        <p class="mb-5">베르의 디스코드 서버에 참여하여 커뮤니티와 연결하고 업무를 원활하게 진행하세요.</p>
+        <!-- 디스코드 초대 링크 입력 -->
+        <a class="btn btn-primary btn-xl" href="https://discord.gg/8DmWwe9d2P" target="_blank">디스코드로 이동하기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <p>© 2024 BER. All rights reserved.</p>
+  <p>서버 관련 문의는 하울쨩한테</p>
+</div>
+
+<!-- Bootstrap, JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

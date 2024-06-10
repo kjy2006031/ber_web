@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* 커스텀 내비게이션 바 스타일 */
+        .navbar-custom {
+            font-family: "Gasoek One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            background-color: #000; /* 배경색 검정색 */
+            box-shadow: none; /* 그림자 없음 */
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: black; /* 텍스트 색상 흰색 */
+            font-weight: bold; /* 폰트 두껍게 */
+            transition: color 0.3s; /* 색상 변화 애니메이션 */
+        }
+
+        .navbar-custom .navbar-brand:hover,
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: red !important; /* 마우스 호버 시 텍스트 색상 */
+        }
+
+        .navbar-custom .navbar-toggler-icon {
+            background-color: #fff; /* 햄버거 아이콘 색상 흰색 */
+        }
+
+        .navbar-custom .navbar-toggler {
+            border: none; /* 햄버거 아이콘 버튼 테두리 제거 */
+        }
+
+        /* 배경 이미지 고정 */
+        body {
+            background-image: url('main.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white; /* 기본 텍스트 색상 */
+            background-blend-mode: darken;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .donation-content {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .donation-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom">
+  <div class="container">
+    <a class="navbar-brand" href="home.html">BER</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="main.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dev.html">DEV</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="discord.html">DISCORD</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="donate.html">Donate <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    <h1 class="title">Support Us</h1>
+    <div class="donation-content">
+        <p>Your support helps us to keep going and make things better!</p>
+        <a href="#" class="donation-button">Donate Now</a>
+    </div>
+</div>
+
+<!-- Bootstrap, JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
